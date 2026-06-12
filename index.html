@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Календарь отпусков</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Календарь отпусков</h1>
+      <p>Визуально отслеживай отпуска и пересечения сотрудников</p>
+    </header>
+
+    <section class="panel">
+      <h2>Добавить отпуск</h2>
+
+      <div class="form">
+        <input id="employeeName" type="text" placeholder="Имя сотрудника" />
+        <input id="dateFrom" type="date" />
+        <input id="dateTo" type="date" />
+        <button id="addVacation">Добавить</button>
+      </div>
+    </section>
+
+    <section class="calendar-panel">
+      <div class="calendar-head">
+        <button id="prevMonth">←</button>
+        <h2 id="monthTitle"></h2>
+        <button id="nextMonth">→</button>
+      </div>
+
+      <div class="weekdays">
+        <div>Пн</div>
+        <div>Вт</div>
+        <div>Ср</div>
+        <div>Чт</div>
+        <div>Пт</div>
+        <div>Сб</div>
+        <div>Вс</div>
+      </div>
+
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Список отпусков</h2>
+      <div id="vacationList" class="vacation-list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
