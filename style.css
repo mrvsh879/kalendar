@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.panel,
+.calendar-panel {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.panel h2,
+.calendar-panel h2 {
+  margin-top: 0;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr auto;
+  gap: 12px;
+}
+
+input,
+button {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-head button {
+  width: 48px;
+  height: 42px;
+}
+
+.weekdays,
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekdays {
+  margin: 16px 0 8px;
+  font-weight: 700;
+  color: #6b7280;
+  text-align: center;
+}
+
+.day {
+  min-height: 120px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.day.empty {
+  background: transparent;
+  border: none;
+}
+
+.day-number {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.vacation-tag {
+  font-size: 12px;
+  padding: 5px 7px;
+  border-radius: 8px;
+  background: #dbeafe;
+  color: #1e40af;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day.overlap {
+  background: #fff1f2;
+  border: 2px solid #fb7185;
+}
+
+.day.overlap .vacation-tag {
+  background: #fecdd3;
+  color: #9f1239;
+}
+
+.vacation-list {
+  display: grid;
+  gap: 10px;
+}
+
+.vacation-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.vacation-item strong {
+  display: block;
+}
+
+.vacation-item span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .day {
+    min-height: 95px;
+  }
+
+  .vacation-tag {
+    font-size: 11px;
+  }
+}
